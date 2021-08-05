@@ -1,7 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:clima/screens/loading_screen.dart';
+import 'package:flutter_config/flutter_config.dart';
 
-void main() => runApp(MyApp());
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized(); // Required by FlutterConfig
+  await FlutterConfig.loadEnvVariables();
+
+  runApp(MyApp());
+}
 
 class MyApp extends StatelessWidget {
   @override

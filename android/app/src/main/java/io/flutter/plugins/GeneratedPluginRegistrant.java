@@ -1,6 +1,7 @@
 package io.flutter.plugins;
 
 import io.flutter.plugin.common.PluginRegistry;
+import com.byneapp.flutter_config.FlutterConfigPlugin;
 import com.baseflow.geolocator.GeolocatorPlugin;
 
 /**
@@ -11,6 +12,7 @@ public final class GeneratedPluginRegistrant {
     if (alreadyRegisteredWith(registry)) {
       return;
     }
+    FlutterConfigPlugin.registerWith(registry.registrarFor("com.byneapp.flutter_config.FlutterConfigPlugin"));
     GeolocatorPlugin.registerWith(registry.registrarFor("com.baseflow.geolocator.GeolocatorPlugin"));
   }
 

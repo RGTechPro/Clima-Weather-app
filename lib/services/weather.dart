@@ -1,14 +1,13 @@
 import 'networking.dart';
 import 'location.dart';
-
-const String api = '179a50e65fec0bbc67fe15b683017f90';
+import 'package:flutter_config/flutter_config.dart';
 
 class WeatherModel {
   Future getCityWeather(var cityName) async {
     NetworkHelp n;
     var decoded;
     n = NetworkHelp(
-        'http://api.openweathermap.org/data/2.5/weather?q=$cityName&appid=$api&units=metric');
+        'http://api.openweathermap.org/data/2.5/weather?q=$cityName&appid=${FlutterConfig.get('API_KEY')}&units=metric');
     decoded = await n.getData();
 
     return decoded;
@@ -23,7 +22,7 @@ class WeatherModel {
     NetworkHelp n;
     var decoded;
     n = NetworkHelp(
-        'http://api.openweathermap.org/data/2.5/weather?lat=${location.latitude}&lon=${location.longitude}&appid=$api&units=metric');
+        'http://api.openweathermap.org/data/2.5/weather?lat=${location.latitude}&lon=${location.longitude}&appid=${FlutterConfig.get('API_KEY')}&units=metric');
     decoded = await n.getData();
 
     return decoded;
