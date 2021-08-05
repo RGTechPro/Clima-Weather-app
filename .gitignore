@@ -67,7 +67,4 @@ fastlane/test_output
 fastlane/readme.md
 .env
 .idea
-.dart_tool/flutter_build/fddb7b1725c7bb0d853a2854f15761bd/kernel_snapshot.d
-.dart_tool/flutter_build/fddb7b1725c7bb0d853a2854f15761bd/flutter_assets.d
-.dart_tool/flutter_build/0bd3ca3e582a27a8c9493491ed2b7a1c/kernel_snapshot.d
-.dart_tool/flutter_build/0bd3ca3e582a27a8c9493491ed2b7a1c/flutter_assets.d
+.dart_tool
